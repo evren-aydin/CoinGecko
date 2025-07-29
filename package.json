@@ -1,0 +1,35 @@
+{
+  "name": "coingecko-mcp-chatbot",
+  "version": "1.0.0",
+  "description": "AI-powered cryptocurrency chatbot using Claude API and CoinGecko MCP",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "setup": "npm install && echo '✅ Setup complete! Please configure your environment variables.'",
+    "test": "node test-connection.js"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "claude",
+    "anthropic",
+    "coingecko",
+    "mcp",
+    "chatbot",
+    "ai"
+  ],
+  "author": "evo",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.57.0",
+    "@coingecko/coingecko-mcp": "^1.11.0",
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

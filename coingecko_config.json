@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "coingecko_api": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@coingecko/coingecko-mcp",
+        "--client=claude",
+        "--tools=dynamic"
+      ],
+      "env": {
+        "COINGECKO_DEMO_API_KEY": "CG-YkHSBL5Rs7DTZMyhfTbJiijy",
+        "COINGECKO_ENVIRONMENT": "demo"
+      }
+    }
+  }
+}
