@@ -57,10 +57,8 @@ async function initializeMcpProcess() {
 
     const mcpEnv = {
       ...process.env,
-      COINGECKO_PRO_API_KEY: process.env.COINGECKO_PRO_API_KEY || "",
-      COINGECKO_DEMO_API_KEY:
-        process.env.COINGECKO_DEMO_API_KEY || "CG-demo-api-key",
-      COINGECKO_ENVIRONMENT: process.env.COINGECKO_ENVIRONMENT || "demo",
+      COINGECKO_DEMO_API_KEY: process.env.COINGECKO_DEMO_API_KEY,
+      COINGECKO_ENVIRONMENT: process.env.COINGECKO_ENVIRONMENT,
       PATH: process.env.PATH,
       NODE_PATH: process.env.NODE_PATH,
     };
@@ -69,11 +67,6 @@ async function initializeMcpProcess() {
     console.log(`   Command: ${command}`);
     console.log(`   Args: ${args.join(" ")}`);
     console.log(`   Environment: ${mcpEnv.COINGECKO_ENVIRONMENT}`);
-    console.log(
-      `   API Key: ${
-        mcpEnv.COINGECKO_PRO_API_KEY ? "✅ Set" : "⚠️  Using demo"
-      }`
-    );
 
     mcpProcess = spawn(command, args, {
       stdio: ["pipe", "pipe", "pipe"],
